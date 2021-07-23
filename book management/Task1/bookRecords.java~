@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class bookRecords{
+book[] a=new book[5];
+int size=0;
+Scanner sc=new Scanner(System.in);
+public void AddRecord(){
+System.out.println("Enter Book Name:");
+String a=sc.nextLine();
+System.out.println("Enter Book Author:");
+String b=sc.nextLine();
+System.out.println("Enter Book Publisher:");
+String c=sc.nextLine();
+if(size==a.length){
+book b[]=new book[a.length+5];
+for(int i=0;i<a.length;i++){
+b[i]=a[i];
+}
+
+}
+}
+
+}

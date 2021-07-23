@@ -1,0 +1,10 @@
+public class test{
+  public static void main(String arg[]){
+   MyOrderList m=new  MyOrderList();
+   Node a= new Node(1,null);
+   m.insert(a);
+   m.insert(new Node(2,null));
+   m.insert(new Node(3,null));
+   m.insert(new Node(4,null));
+  }
+}

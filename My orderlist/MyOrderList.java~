@@ -1,0 +1,43 @@
+public class  MyOrderList{
+  Node curser;
+  
+  public MyOrderList(){}
+  
+  public void insert(Node newElement){
+    
+    if(curser==null){
+      curser= newElement;
+      newElement.next= curser;
+      
+    }else if(curser==curser.next){
+      curser.next= newElement;
+      newElement.next=curser;
+    }else{
+      boolean a=true;
+      Node tail=curser;
+      for(;;tail=tail.next){
+        if(tail.next.elem==tail.elem){
+          System.out.println("Same key exist\n cant insert!!!");
+          a=false;
+          break;
+        }
+        if(tail.next==curser||tail.next.elem>tail.elem){break;}
+      }
+      if(a){
+        Node t=tail.next;
+        tail.next=newElement;
+        newElement.next=t;
+      }
+    }
+  }
+  
+  public void print(){
+    Node t=curser;
+    for(;;t=t.next){
+      System.out.println(t.elem);
+      if(t.next==curser)break;
+    }
+  }
+  
+  
+}
